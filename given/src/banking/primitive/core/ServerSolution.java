@@ -51,10 +51,10 @@ class ServerSolution implements AccountServer {
 		if (accountMap.get(name) != null) return false;
 		
 		Account acc;
-		if ("Checking".equals(type)) {
+		if (type == "Checking") {
 			acc = new Checking(name, balance);
 
-		} else if ("Savings".equals(type)) {
+		} else if (type == "Savings") {
 			acc = new Savings(name, balance);
 
 		} else {
